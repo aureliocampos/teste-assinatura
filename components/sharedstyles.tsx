@@ -15,7 +15,7 @@ export const Main = styled.main`
 `
 export const FlexContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 5.5em;
   margin-top: 4em;
@@ -52,7 +52,7 @@ export const Column = styled.div`
     }
   }
   &:last-child {
-    width: 537px;
+    width: 658px;
   }
 
   > h2 {
