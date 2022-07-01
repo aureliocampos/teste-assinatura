@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
-  padding: 0 0.5rem;
+export const Container = styled.div`
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -9,46 +9,91 @@ const Container = styled.div`
   height: 100vh;
   min-height: 100vh;
 `
-const Main = styled.main`
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const Main = styled.main`
+  width: 1130px;
+  height: 100%;
 `
+export const FlexContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5.5em;
+  margin-top: 4em;
+`
+export const Column = styled.div`
+  &:first-child {
+    width: 400px;
 
-const Title = styled.h1`
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  text-align: center;
-  text-decoration: none;
+    > form div {
+      width: 369px;
+      margin: 1.5em 0;
 
-  a {
-    color: ${({ theme }) => theme.colors.secondary};
-    text-decoration: none;
-    &:hover,
-    :focus,
-    :active {
-      text-decoration: underline;
+      > label {
+        display: block;
+        font: 400 1em / 125.18% "Gotham";
+        color: #37324B;
+        margin: 0 1.5em 1em 0;
+      }
+      > input {
+        display: block;
+        width: 360px;
+        font: 400 12px / 16px "Gotham";
+        color: #7A7589;
+        padding: 12px 24px 14px;
+        background: #F1F1FA;
+        border: 1px solid transparent;
+        border-radius: 40px;
+        
+        &:focus-visible {
+          outline: none;
+          border: 1px solid rgba(55, 50, 75, 0.5);
+        }
+      }
     }
   }
-`
+  &:last-child {
+    width: 537px;
+  }
 
-const Description = styled.p`
-  text-align: center;
-  line-height: 1.5;
-  font-size: 1.5rem;
+  > h2 {
+    font: 500 1.125em / 120% 'Gotham';
+    color: ${({ theme }) => theme.colors.primary};
+    margin: 0;
+  }
 `
-const CodeTag = styled.code`
-  background: #fafafa;
-  border-radius: 5px;
-  margin: 0 0.75rem;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-`
+export const Button = styled.button`
+  display: block;
+  font: 400 1em "Gotham";
+  color: #fff;
+  padding: 12px 24px 14px;
+  background: #37324B;
+  border: 1px solid #37324B;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-top: 60px;
+`;
 
-export { Container, Main, Title, Description, CodeTag }
+export const MessageSuccess = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  > div {
+    position: absolute;
+    left: -20em;
+    bottom: 20px;
+    background-color: #00B9B4;
+    padding: 12px 24px;
+    border-radius: 4px;
+    visibility: hidden;
+    font: 500 16px / 120% "Gotham";
+    color: #F1F1FA;
+    transition: all 0.4s ease-in-out;
+
+    &.active {
+      visibility: visible;
+      left: 0;
+    }
+  }
+  
+`

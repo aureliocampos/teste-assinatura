@@ -7,4 +7,20 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = {
+  webpack: (
+    nextConfig,
+    {buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
+  ) => {
+    nextConfig.module.rules.push({
+      test: /\.(woff|woff2)$/i,
+      use: [
+        {
+          loader: 'url-loader',
+        },
+      ],
+    })
+
+    return nextConfig;
+  },
+}
