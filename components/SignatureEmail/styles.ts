@@ -64,7 +64,7 @@ export const FieldEmail = styled.td`
 `
 
 export const Banner = styled.td`
-  > img {
+  img {
     margin-top: 20px;
   }
 `

@@ -86,7 +86,17 @@ export default function SignatureEmail(user: User) {
           </tr>
           <tr>
             <Banner>
-              <img src="https://pages.cortex-intelligence.com/hubfs/assinatura-de-email-cortex/assinatura-email-banner.png" alt="Banner" />
+              <table cellPadding="0" cellSpacing="0">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="https://pages.cortex-intelligence.com/tendencias-de-comunicacao-na-midia-e-bolhas-de-informacao" target="_blank" rel="noopener noreferrer">
+                        <img src="https://pages.cortex-intelligence.com/hubfs/assinatura-de-email-cortex/banner-email.png" width="100%" alt="Banner" />
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </Banner>
             <td></td>
           </tr>
