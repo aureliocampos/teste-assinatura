@@ -97,3 +97,15 @@ export const MessageSuccess = styled.div`
   }
   
 `
+
+export const ModalButton = styled.button`
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  font: 500 0.75em / 100% "Gotham";
+  color: white;
+  background-color: #37324B;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+`

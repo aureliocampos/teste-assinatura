@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head'
 import {
   Container,
@@ -6,12 +7,13 @@ import {
   Column,
   Button,
   MessageSuccess,
+  ModalButton,
 } from '../components/sharedstyles'
 
 import SignatureEmail from '../components/SignatureEmail';
 import Header from "../components/Header";
 import { useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
+import { Modal } from '../components/Modal';
 
 type FormInputs = {
   name: string,
@@ -21,9 +23,14 @@ type FormInputs = {
 
 export default function Home() {
 
+  const [open, setOpen ] = useState(false);
+
   const { register, watch } = useForm<FormInputs>();
   const watchAllFields = watch();   
 
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   function messageSuccessful() {
     document.querySelector('.message').classList.add('active');
@@ -32,6 +39,16 @@ export default function Home() {
       document.querySelector('.message').classList.remove('active');
     }, 1500);
   }
+
+  useEffect(() => {
+    const close = (e) => {
+      if(e.keyCode === 27){
+        handleClose();
+      }
+    }
+    window.addEventListener('keydown', close)
+    return () => window.removeEventListener('keydown', close)
+  },[])
 
   return (
     <Container>
@@ -112,6 +129,8 @@ export default function Home() {
               /> 
           </Column>
         </FlexContainer>
+        <ModalButton onClick={handleOpen}>Dúvidas de como instalar ?</ModalButton>
+        <Modal open={open} close={handleClose}/>
       </Main>
       <MessageSuccess>
         <div className='message'>
