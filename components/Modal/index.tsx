@@ -62,7 +62,7 @@ export function Modal({open, close}) {
             className="mySwiper"
           >
             <SwiperSlide>
-              <Image src={step1} priority alt="Imagem de demonstração, acesse o Gerador de Assinatura de Email Cortex" layout='responsive'/>
+              <Image src={step1} alt="Imagem de demonstração, acesse o Gerador de Assinatura de Email Cortex" layout='responsive'/>
             </SwiperSlide>
             <SwiperSlide>
               <Image src={step2} alt="Imagem de demonstração, acesse o Gerador de Assinatura de Email Cortex" layout='responsive'/>

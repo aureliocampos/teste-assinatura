@@ -34,12 +34,15 @@ export const Container = styled.div`
   top: 10px;
   left: 0;
   right: 0;
-  max-width: 65%;
+  max-width: 70%;
   margin: 0 auto;
   padding: 3em;
   background: #F5F5F5;
   border-radius: 24px;
 
+  .swiper-slide {
+    padding: 0 2.75em;
+  }
   .swiper-button-next, .swiper-button-prev {
     color: #642D96;
   }
