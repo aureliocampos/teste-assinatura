@@ -18,7 +18,7 @@ export const FlexContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   gap: 5.5em;
-  margin-top: 4em;
+  margin-top: 2em;
 `
 export const Column = styled.div`
   &:first-child {
@@ -100,12 +100,13 @@ export const MessageSuccess = styled.div`
 
 export const ModalButton = styled.button`
   position: absolute;
-  right: 50px;
-  bottom: 50px;
-  font: 500 0.75em / 100% "Gotham";
+  right: 20px;
+  bottom: 10px;
+  font: 500 0.675em "Gotham";
   color: white;
   background-color: #37324B;
   border-radius: 16px;
-  padding: 1rem 1.25rem;
+  padding: 0.8rem 1.25rem;
   cursor: pointer;
+  border: none;
 `

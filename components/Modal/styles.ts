@@ -43,6 +43,12 @@ export const Container = styled.div`
   .swiper-slide {
     padding: 0 2.75em;
   }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
   .swiper-button-next, .swiper-button-prev {
     color: #642D96;
   }

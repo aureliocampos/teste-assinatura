@@ -6,7 +6,7 @@ export const Preview = styled.div`
   width: 100%;
   height: 381px;
   padding-left: 40px;
-  margin-top: 38px;
+  margin-top: 24px;
   box-shadow: 20px 20px 50px rgba(204, 204, 230, 0.27);
   border-radius: 16px;
 `
