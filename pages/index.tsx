@@ -64,13 +64,13 @@ export default function Home() {
             <h2>Preencha seus dados</h2>
             <form>
               <div>
-                <label htmlFor="name">Nome e Sobrenome</label>
-                <input type="text" name='name' placeholder="Nome e Sobrenome" 
+                <label htmlFor="name">Nome e sobrenome</label>
+                <input type="text" name='name' placeholder="Nome e sobrenome" 
                   {...register("name", {required: true, maxLength: 80})} 
                 />
               </div>
               <div>
-                <label htmlFor="name">Seu Cargo</label>
+                <label htmlFor="name">Seu cargo</label>
                 <input type="text" name="office" placeholder="Cargo" 
                   {...register("office", {required: true})} 
                 />
@@ -106,15 +106,15 @@ export default function Home() {
 
               window.getSelection().removeAllRanges();
                            
-            }}>Copiar Assinatura</Button>
+            }}>copiar assinatura</Button>
           </Column>
           <Column>
-            <h2>Veja como ficará sua asssinatura de email</h2>
+            <h2>Veja como ficará sua assinatura de email</h2>
             <SignatureEmail 
                 name={ 
                   watchAllFields.name ? (
                     watchAllFields.name
-                  ) : ("Nome e Sobrenome")
+                  ) : ("Nome e sobrenome")
                 }
                 jobTitle={
                   watchAllFields.office ? (
